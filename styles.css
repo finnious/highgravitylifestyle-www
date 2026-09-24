@@ -99,6 +99,10 @@ footer p {
   margin: 0;
 }
 
+footer a {
+  color: inherit;
+}
+
 @media (max-width: 40rem) {
   .site-header {
     align-items: flex-start;
