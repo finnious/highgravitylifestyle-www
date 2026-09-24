@@ -49,6 +49,7 @@
   var empty = document.querySelector(".note-empty");
   var year = "all";
   var theme = "all";
+  var review = "all";
 
   function tokenMatch(raw, value) {
     if (!raw) {
@@ -64,7 +65,8 @@
       item.classList.remove("is-last-visible");
       var yearOk = year === "all" || tokenMatch(item.getAttribute("data-year"), year);
       var themeOk = theme === "all" || tokenMatch(item.getAttribute("data-theme"), theme);
-      var visible = yearOk && themeOk;
+      var reviewOk = review === "all" || tokenMatch(item.getAttribute("data-review"), review);
+      var visible = yearOk && themeOk && reviewOk;
       item.hidden = !visible;
       if (visible) {
         shown += 1;
@@ -90,6 +92,8 @@
       year = value;
     } else if (group === "theme") {
       theme = value;
+    } else if (group === "review") {
+      review = value;
     } else {
       return;
     }

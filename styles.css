@@ -100,6 +100,28 @@ body {
   color: var(--amber);
 }
 
+.page--note .note-date:has(+ .note-review-badge) {
+  margin-bottom: 0.7rem;
+}
+
+.note-review-badge {
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: 0.28rem 0.65rem;
+  border: 1px solid var(--amber);
+  background: transparent;
+  color: var(--amber);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.notes-index .note-review-badge {
+  margin: 0.2rem 0 0.45rem;
+}
+
 .nav-primary {
   display: flex;
   flex-wrap: wrap;
