@@ -1,0 +1,26 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  ! Access-Control-Allow-Origin
+
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/favicon.ico
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/favicon.svg
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=86400, must-revalidate

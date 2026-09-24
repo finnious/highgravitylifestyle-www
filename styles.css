@@ -57,7 +57,28 @@ body {
 
 .wrap {
   width: min(var(--page), calc(100% - 2.5rem));
+  max-width: 100%;
   margin-inline: auto;
+  overflow-x: clip;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  z-index: 20;
+  transform: translateY(-150%);
+  padding: 0.45rem 0.75rem;
+  background: var(--amber);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  transform: translateY(0.75rem);
 }
 
 .site-header {
