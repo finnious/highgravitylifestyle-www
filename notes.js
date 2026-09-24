@@ -50,13 +50,20 @@
   var year = "all";
   var theme = "all";
 
+  function tokenMatch(raw, value) {
+    if (!raw) {
+      return false;
+    }
+    return raw.split(/\s+/).indexOf(value) !== -1;
+  }
+
   function apply() {
     var shown = 0;
     var last = null;
     items.forEach(function (item) {
       item.classList.remove("is-last-visible");
-      var yearOk = year === "all" || item.getAttribute("data-year") === year;
-      var themeOk = theme === "all" || item.getAttribute("data-theme") === theme;
+      var yearOk = year === "all" || tokenMatch(item.getAttribute("data-year"), year);
+      var themeOk = theme === "all" || tokenMatch(item.getAttribute("data-theme"), theme);
       var visible = yearOk && themeOk;
       item.hidden = !visible;
       if (visible) {
