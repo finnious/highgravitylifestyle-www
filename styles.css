@@ -222,8 +222,65 @@ h2 {
 }
 
 .note-link a:hover,
-.prose a:hover {
+.prose a:hover,
+.notes-index a:hover {
   color: var(--amber);
+}
+
+.notes-index {
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  max-width: 40rem;
+}
+
+.notes-index li {
+  padding: 1.15rem 0 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.notes-index li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.note-kicker {
+  margin: 0 0 0.3rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.notes-index a {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--cream);
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--copper);
+  text-underline-offset: 0.18em;
+}
+
+.notes-index .note-dek {
+  margin: 0.4rem 0 0;
+  color: var(--cream-muted);
+  font-size: 1rem;
+}
+
+.prose blockquote {
+  margin: 0 0 1.15rem;
+  padding: 0 0 0 1rem;
+  border-left: 2px solid var(--copper);
+}
+
+.prose ul {
+  margin: 0 0 1.15rem;
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin: 0.25rem 0;
 }
 
 form {
