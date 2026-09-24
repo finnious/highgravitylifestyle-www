@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — High Gravity Lifestyle</title>
+  <meta name="description" content="Got a story, a place, or a moment worth sharing? We'd love to hear it. Send us a note and we'll get back to you." />
+  <link rel="canonical" href="https://www.highgravitylifestyle.com/contact/" />
+  <meta property="og:title" content="Contact — High Gravity Lifestyle" />
+  <meta property="og:description" content="Got a story, a place, or a moment worth sharing? We'd love to hear it. Send us a note and we'll get back to you." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.highgravitylifestyle.com/contact/" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="/">
+        <!-- Wordmark placeholder. Locked prompt: HIGH GRAVITY, clean sans, charcoal on warm cream, amber dot. -->
+        <span class="wordmark">High Gravity<span class="dot" aria-hidden="true"></span></span>
+        <span class="ph-label">Wordmark placeholder</span>
+      </a>
+      <nav class="nav-primary" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/field-notes/where-it-started/">Field Notes</a>
+        <a href="/contact/" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap page page--text">
+      <h1>Contact</h1>
+      <p class="lede">Got a story, a place, or a moment worth sharing? We'd love to hear it. Send us a note and we'll get back to you.</p>
+
+      <!-- Direct address is a placeholder until a working inbox is connected. -->
+      <form id="contact-form" data-email="hello@highgravitylifestyle.com">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send a note</button>
+      </form>
+
+      <p class="direct">Or write directly: <a href="mailto:hello@highgravitylifestyle.com">hello@highgravitylifestyle.com</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-bar">
+      <p>More life per hour.</p>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/field-notes/where-it-started/">Field Notes</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+    <!-- Privacy policy: stub until a contact backend or analytics ships. No page yet. -->
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var form = event.currentTarget;
+      var nameEl = document.getElementById("name");
+      var emailEl = document.getElementById("email");
+      var messageEl = document.getElementById("message");
+      nameEl.value = nameEl.value.trim();
+      emailEl.value = emailEl.value.trim();
+      messageEl.value = messageEl.value.trim();
+      if (!form.reportValidity()) {
+        return;
+      }
+      var subject = encodeURIComponent("Note from " + nameEl.value);
+      var body = encodeURIComponent(messageEl.value + "\n\n" + nameEl.value + "\n" + emailEl.value);
+      window.location.href = "mailto:" + form.dataset.email + "?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
