@@ -129,31 +129,24 @@ main {
   padding: 3.25rem 0 4.75rem;
 }
 
-.placeholder {
-  display: grid;
-  align-content: end;
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
   margin: 0 0 2.75rem;
-  padding: 1rem 1.1rem;
   border: 1px solid var(--line);
-  background:
-    linear-gradient(155deg, rgba(224, 164, 90, 0.5), rgba(196, 98, 45, 0.22) 48%, #1a140f 84%);
 }
 
-.placeholder--hero {
-  aspect-ratio: 16 / 9;
+.photo--hero {
   margin-bottom: 3rem;
 }
 
-.placeholder--about {
-  aspect-ratio: 4 / 3;
+.photo--about {
   max-width: 34rem;
-  background: linear-gradient(180deg, #4a3424 0%, #2a1c14 52%, #14110e 100%);
 }
 
-.placeholder--notes {
-  aspect-ratio: 3 / 2;
+.photo--notes {
   max-width: 40rem;
-  background: linear-gradient(200deg, #3d2b22, #1c1612 62%, #14110e);
 }
 
 h1 {

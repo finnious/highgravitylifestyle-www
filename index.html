@@ -11,9 +11,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.highgravitylifestyle.com/" />
   <meta property="og:site_name" content="High Gravity Lifestyle" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://www.highgravitylifestyle.com/assets/hero.webp" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:image:alt" content="Two glasses of dark beer on a rooftop table, city skyline at golden hour" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="High Gravity Lifestyle — More Life Per Hour" />
   <meta name="twitter:description" content="More life per hour. Not louder. Not riskier. Fuller." />
+  <meta name="twitter:image" content="https://www.highgravitylifestyle.com/assets/hero.webp" />
+  <meta name="twitter:image:alt" content="Two glasses of dark beer on a rooftop table, city skyline at golden hour" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -21,7 +27,7 @@
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="/">
-        <!-- Wordmark placeholder. Locked prompt: HIGH GRAVITY, clean sans, charcoal on warm cream, amber dot. -->
+        <!-- CSS text wordmark. Cream lockup is stored at /assets/wordmark.webp and stays out of this dark header. -->
         <span class="wordmark">High Gravity<span class="dot" aria-hidden="true"></span></span>
         <span class="ph-label">Wordmark placeholder</span>
       </a>
@@ -36,10 +42,7 @@
 
   <main>
     <div class="wrap page page--home">
-      <!-- Hero placeholder. Locked prompt: golden-hour skyline, rooftop table, two glasses of dark beer, no people, 16:9. -->
-      <div class="placeholder placeholder--hero" role="img" aria-label="Hero image placeholder">
-        <span class="ph-label">Hero image placeholder</span>
-      </div>
+      <img class="photo photo--hero" src="/assets/hero.webp" width="1280" height="720" alt="Two glasses of dark beer on a rooftop table, city skyline at golden hour" fetchpriority="high" />
 
       <h1>More life per hour. Not louder. Not riskier. Fuller.</h1>
 
