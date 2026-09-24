@@ -4,16 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — High Gravity Lifestyle</title>
-  <meta name="description" content="Got a story, a place, or a moment worth sharing? We'd love to hear it. Send us a note and we'll get back to you." />
+  <meta name="description" content="Demo site built by WeAddBots from friend emails. Book a discovery call with the team." />
   <link rel="canonical" href="https://www.highgravitylifestyle.com/contact/" />
   <meta property="og:title" content="Contact — High Gravity Lifestyle" />
-  <meta property="og:description" content="Got a story, a place, or a moment worth sharing? We'd love to hear it. Send us a note and we'll get back to you." />
+  <meta property="og:description" content="Demo site built by WeAddBots from friend emails. Book a discovery call with the team." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.highgravitylifestyle.com/contact/" />
   <meta property="og:site_name" content="High Gravity Lifestyle" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://www.highgravitylifestyle.com/assets/hero.webp" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:image:alt" content="Two glasses of dark beer on a rooftop table, city skyline at golden hour" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact — High Gravity Lifestyle" />
-  <meta name="twitter:description" content="Got a story, a place, or a moment worth sharing? We'd love to hear it. Send us a note and we'll get back to you." />
+  <meta name="twitter:description" content="Demo site built by WeAddBots from friend emails. Book a discovery call with the team." />
+  <meta name="twitter:image" content="https://www.highgravitylifestyle.com/assets/hero.webp" />
+  <meta name="twitter:image:alt" content="Two glasses of dark beer on a rooftop table, city skyline at golden hour" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -21,14 +27,13 @@
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="/">
-        <!-- Wordmark placeholder. Locked prompt: HIGH GRAVITY, clean sans, charcoal on warm cream, amber dot. -->
+        <!-- CSS text wordmark. Cream lockup is stored at /assets/wordmark.webp and stays out of this dark header. -->
         <span class="wordmark">High Gravity<span class="dot" aria-hidden="true"></span></span>
-        <span class="ph-label">Wordmark placeholder</span>
       </a>
       <nav class="nav-primary" aria-label="Primary">
         <a href="/">Home</a>
         <a href="/about/">About</a>
-        <a href="/field-notes/where-it-started/">Field Notes</a>
+        <a href="/field-notes/">Field Notes</a>
         <a href="/contact/" aria-current="page">Contact</a>
       </nav>
     </div>
@@ -36,54 +41,26 @@
 
   <main>
     <div class="wrap page page--text">
-      <h1>Contact</h1>
-      <p class="lede">Got a story, a place, or a moment worth sharing? We'd love to hear it. Send us a note and we'll get back to you.</p>
-
-      <form id="contact-form" data-email="hello@highgravitylifestyle.com">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send a note</button>
-      </form>
+      <h1>Built by WeAddBots</h1>
+      <div class="prose">
+        <p>This site is a demo. Al, a WeAddBots AI, took emails between friends and turned them into Field Notes.</p>
+        <p>If you want the same kind of build from your own inbox or brand, book a discovery call with the WeAddBots team.</p>
+        <p><a href="https://weaddbots.com/contact">Book a discovery call</a></p>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-bar">
-      <p>More life per hour.</p>
+      <p>More life per hour. <a href="https://weaddbots.com/contact">Built as a WeAddBots demo.</a></p>
       <nav aria-label="Footer">
         <a href="/">Home</a>
         <a href="/about/">About</a>
-        <a href="/field-notes/where-it-started/">Field Notes</a>
+        <a href="/field-notes/">Field Notes</a>
         <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
       </nav>
     </div>
   </footer>
-
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-      event.preventDefault();
-      var form = event.currentTarget;
-      var nameEl = document.getElementById("name");
-      var emailEl = document.getElementById("email");
-      var messageEl = document.getElementById("message");
-      nameEl.value = nameEl.value.trim();
-      emailEl.value = emailEl.value.trim();
-      messageEl.value = messageEl.value.trim();
-      if (!form.reportValidity()) {
-        return;
-      }
-      var subject = encodeURIComponent("Note from " + nameEl.value);
-      var body = encodeURIComponent(messageEl.value + "\n\n" + nameEl.value + "\n" + emailEl.value);
-      window.location.href = "mailto:" + form.dataset.email + "?subject=" + subject + "&body=" + body;
-    });
-  </script>
 </body>
 </html>
