@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="/">
@@ -52,6 +53,11 @@
         <p>The note never said what Montana was for. It did not have to. One cold month, three cities, and a return that closed the circle. That stretch is the field note.</p>
         <p><a href="/field-notes/">All field notes</a></p>
       </div>
+      <nav class="note-pager" aria-label="More notes">
+        <a class="note-pager-prev" rel="prev" href="/field-notes/vegas-2010/"><span class="note-pager-kicker">Previous</span>Vegas on Miles</a>
+        <a class="note-pager-index" href="/field-notes/">Field Notes</a>
+        <a class="note-pager-next" rel="next" href="/field-notes/boulder-disc-golf-2011/"><span class="note-pager-kicker">Next</span>Disc Golf at Mountain Sun</a>
+      </nav>
     </div>
   </main>
 
@@ -67,5 +73,6 @@
       </nav>
     </div>
   </footer>
+  <script src="/notes.js"></script>
 </body>
 </html>

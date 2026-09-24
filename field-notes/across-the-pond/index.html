@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="/">
@@ -55,6 +56,11 @@
         <p>Across the pond, with friends, in seats picked for the joke as much as the flight. That was the itinerary.</p>
         <p><a href="/field-notes/">All field notes</a></p>
       </div>
+      <nav class="note-pager" aria-label="More notes">
+        <a class="note-pager-prev" rel="prev" href="/field-notes/where-it-started/"><span class="note-pager-kicker">Previous</span>Where It Started</a>
+        <a class="note-pager-index" href="/field-notes/">Field Notes</a>
+        <a class="note-pager-next" rel="next" href="/field-notes/state-of-the-gravity-2009/"><span class="note-pager-kicker">Next</span>State of the Gravity — 2009</a>
+      </nav>
     </div>
   </main>
 
@@ -70,5 +76,6 @@
       </nav>
     </div>
   </footer>
+  <script src="/notes.js"></script>
 </body>
 </html>

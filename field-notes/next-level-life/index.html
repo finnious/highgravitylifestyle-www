@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="/">
@@ -64,6 +65,11 @@
         <p>A company, for the length of the thread. Float, disc golf, the bus, the coffee, and the camps that keep it from sounding legitimate. The cane and the pistachios closed it. Nobody was actually selling.</p>
         <p><a href="/field-notes/">All field notes</a></p>
       </div>
+      <nav class="note-pager" aria-label="More notes">
+        <a class="note-pager-prev" rel="prev" href="/field-notes/south-korea-2012/"><span class="note-pager-kicker">Previous</span>South Korea?</a>
+        <a class="note-pager-index" href="/field-notes/">Field Notes</a>
+        <span class="note-pager-next"></span>
+      </nav>
     </div>
   </main>
 
@@ -79,5 +85,6 @@
       </nav>
     </div>
   </footer>
+  <script src="/notes.js"></script>
 </body>
 </html>

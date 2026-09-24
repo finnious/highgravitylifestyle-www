@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="/">
@@ -52,6 +53,11 @@
         <p>This is the first note. The others are what happened after the tab was paid.</p>
         <p><a href="/field-notes/">All field notes</a></p>
       </div>
+      <nav class="note-pager" aria-label="More notes">
+        <span class="note-pager-prev"></span>
+        <a class="note-pager-index" href="/field-notes/">Field Notes</a>
+        <a class="note-pager-next" rel="next" href="/field-notes/across-the-pond/"><span class="note-pager-kicker">Next</span>Across the Pond</a>
+      </nav>
     </div>
   </main>
 
@@ -67,5 +73,6 @@
       </nav>
     </div>
   </footer>
+  <script src="/notes.js"></script>
 </body>
 </html>

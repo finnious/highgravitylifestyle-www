@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="/">
@@ -52,6 +53,11 @@
         <p>Other trips in this log start as a fare. This one started as a click. It never picked up a second sentence. The unfinished question is the note.</p>
         <p><a href="/field-notes/">All field notes</a></p>
       </div>
+      <nav class="note-pager" aria-label="More notes">
+        <a class="note-pager-prev" rel="prev" href="/field-notes/south-america-2012/"><span class="note-pager-kicker">Previous</span>Atlanta, Buenos Aires, Lima</a>
+        <a class="note-pager-index" href="/field-notes/">Field Notes</a>
+        <a class="note-pager-next" rel="next" href="/field-notes/next-level-life/"><span class="note-pager-kicker">Next</span>Next Level Life</a>
+      </nav>
     </div>
   </main>
 
@@ -67,5 +73,6 @@
       </nav>
     </div>
   </footer>
+  <script src="/notes.js"></script>
 </body>
 </html>
