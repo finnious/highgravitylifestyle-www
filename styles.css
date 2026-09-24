@@ -19,6 +19,13 @@
   box-sizing: border-box;
 }
 
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   background: var(--charcoal);
 }
@@ -26,6 +33,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
   background:
@@ -155,21 +163,26 @@ main {
 .photo {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 0 0 2.75rem;
   border: 1px solid var(--line);
+  object-fit: cover;
 }
 
 .photo--hero {
+  max-height: min(56vw, 26rem);
   margin-bottom: 3rem;
+  object-fit: cover;
+  object-position: center;
 }
 
 .photo--about {
-  max-width: 34rem;
+  max-width: min(34rem, 100%);
 }
 
 .photo--notes {
-  max-width: 40rem;
+  max-width: min(40rem, 100%);
 }
 
 h1 {
@@ -557,7 +570,7 @@ button:hover {
 
 .merch-shots {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(14.5rem, 100%), 1fr));
   gap: 0.85rem;
   margin: 0 0 1.5rem;
 }
@@ -565,13 +578,17 @@ button:hover {
 .merch-shots figure,
 .merch-story {
   margin: 0;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .merch-shots img,
 .merch-story img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
   border: 1px solid var(--line);
   background: var(--charcoal-raised);
 }
