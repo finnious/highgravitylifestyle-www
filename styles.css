@@ -184,8 +184,7 @@ h2 {
 .prose,
 .lede,
 .stand,
-.note-link,
-.direct {
+.note-link {
   max-width: var(--measure);
 }
 
@@ -215,8 +214,7 @@ h2 {
 }
 
 .note-link a,
-.prose a,
-.direct a {
+.prose a {
   color: var(--cream);
   text-decoration-thickness: 1px;
   text-decoration-color: var(--copper);
@@ -224,8 +222,7 @@ h2 {
 }
 
 .note-link a:hover,
-.prose a:hover,
-.direct a:hover {
+.prose a:hover {
   color: var(--amber);
 }
 
@@ -277,11 +274,6 @@ button:hover {
   border-color: var(--amber);
   background: var(--charcoal);
   color: var(--amber);
-}
-
-.direct {
-  margin-top: 2.25rem;
-  color: var(--cream-muted);
 }
 
 .site-footer {
