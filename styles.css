@@ -194,6 +194,10 @@ h2 {
   margin: 0 0 1.15rem;
 }
 
+.prose h2 {
+  margin-top: 2rem;
+}
+
 .stand {
   margin-top: 3.25rem;
   padding-top: 2rem;
