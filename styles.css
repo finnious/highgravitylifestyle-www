@@ -57,7 +57,9 @@ body {
 
 .wrap {
   width: min(var(--page), calc(100% - 2.5rem));
+  max-width: 100%;
   margin-inline: auto;
+  overflow-x: clip;
 }
 
 .site-header {
